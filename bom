@@ -1,6 +1,11 @@
 #!/usr/bin/bash
 
+# the path to all our git binaries
 GITPATH=/usr/lib/git-core
+
+# the path to the directory for our .git directory
+# for now assume current directory.. later we will traverse up the tree until we find it
+GITDIR=.bom
 
 ### ok.. so.. what commands do we need.
 # we need: 
@@ -11,8 +16,17 @@ GITPATH=/usr/lib/git-core
 # - log
 # - commit
 
-# store files named by refdes?  partnumber?  hrmmm refdes makes more sense.
-# refdes must be unique.
+
+# - store files named by refdes?  partnumber?  hrmmm refdes makes more sense.
+# - refdes must be unique.
+# - we could have two types of git objects.  
+# 1) refdes.  Contains a ditributor and partnumber that is used to populate that component
+# 2) part number. contains all the info about the part.
+# - we should probably put these in seperate directories
+#		- refdes/
+#		- digikey/
+#		- some other distributor we support/
+
 
 ### typical workflow
 # bom init # setup new db
@@ -24,6 +38,7 @@ GITPATH=/usr/lib/git-core
 # bom diff # show differences between revisions
 # bom mv # rename a part?  hrmmm maybe
 
+
 ### what typical stuff will we need to do that aren't git commands?
 # bom refresh [ partnumber | refdes ]
 # - updates the data from digikey for the listed partnumber or refdes
@@ -34,3 +49,7 @@ GITPATH=/usr/lib/git-core
 # bom 
 
 
+### We're also going to need some plumbing commands
+# bom-parse-digikey <partnum>
+# - fetchs the page for a digikey part number and grabs the info we care about from it
+# - it will write to output in our standard object format for holding parts
