@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+
+GITPATH=/usr/lib/git-core
+
+### ok.. so.. what commands do we need.
+# we need: 
+# - init
+# - add
+# - rm
+# - show
+# - log
+# - commit
+
+# store files named by refdes?  partnumber?  hrmmm refdes makes more sense.
+# refdes must be unique.
+
+### typical workflow
+# bom init # setup new db
+# bom add [ refdes ] ATTINY2313-20SU-ND  # add this part
+# bom rm [ refdes | partnum ]  # remove this part
+# bom commit # commit these change to the bom
+# bom show # show a current revision of a bom
+# bom log # show history of bom
+# bom diff # show differences between revisions
+# bom mv # rename a part?  hrmmm maybe
+
+### what typical stuff will we need to do that aren't git commands?
+# bom refresh [ partnumber | refdes ]
+# - updates the data from digikey for the listed partnumber or refdes
+# bom tabulate [ quantity ]
+# - calculates the total cost of the bom at the quantity specified
+# bom import <path to netlist/schematic>
+# - gets the list of refdes's from the schematic, and imports them into our database
+# bom 
+
+
