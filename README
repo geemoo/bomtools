@@ -1,0 +1,18 @@
+09:23:22 [ Strogg] well.. basically, right now.. to manage a bill of materials for a hardware design,  you
+	gotta go to the website.. let's say digikey, find a part, and then copy all the info
+	into a spreadsheet.. the prices, the part packaging, the price breaks..
+09:23:40 [ Strogg] then you gotta figure out how many parts you need, and then figure out the totals costs
+	for how many boards you're making
+09:23:49 [ Strogg] I wanna automate all that crap.    
+09:23:59 [ Strogg] so.. the base tool is called bom :)
+09:24:10 [ Strogg] so.. I go "bom init" to start a new db
+09:24:28 [ Strogg] then bom import --geda design.sch
+09:24:43 [ Strogg] and that imports the list of refdes and values and packages I want.
+09:25:12 [ Strogg] then I can do git status to see what has been changed.. what doesn't have a part number
+	assigned to it..
+09:25:40 [ Strogg] to add a part number, I can go "bom add U1 --digikey 1234-1234-ND"
+09:25:55 [ Strogg] and that assigns that part number to that refdes, and downloads all the info and stores
+	it in a local db
+09:26:16 [ Strogg] "bom tabulatecost 10" will calculate costs for printing up 10 boards. :)
+09:26:54 [ Strogg] "bom refresh --all" will go through the list of parts and update our data for all of
+	them
