@@ -1,0 +1,3 @@
+- pat has a digikey parser mostly done up that we can use.  grab that and make it into bom-parse-digikey
+- checkout octopart's API for querying part numbers
+- make a bom (a la git) wrapper for all of the git-* and bom-* commands that we will use.
