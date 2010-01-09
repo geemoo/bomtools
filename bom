@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # the path to all our git binaries
 GITPATH=/usr/lib/git-core
@@ -30,6 +30,7 @@ GITDIR=.bom
 
 ### typical workflow
 # bom init # setup new db
+# bom import foo1.sch foo2.sch foo3.sch  # import the netlists of these schematics
 # bom add [ refdes ] ATTINY2313-20SU-ND  # add this part
 # bom rm [ refdes | partnum ]  # remove this part
 # bom commit # commit these change to the bom
@@ -53,3 +54,14 @@ GITDIR=.bom
 # bom-parse-digikey <partnum>
 # - fetchs the page for a digikey part number and grabs the info we care about from it
 # - it will write to output in our standard object format for holding parts
+
+
+# do some really basic arg parsing
+if [ "x.$1" = "x.init" ]; then
+	export GIT_DIR=$GITDIR
+	$GITPATH/git-init 
+
+elif [ "x.$1" = "x.import" ]; then
+
+
+fi
