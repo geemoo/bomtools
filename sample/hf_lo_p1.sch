@@ -238,7 +238,7 @@ footprint=AVRISP_2x3
 C 50000 44900 1 0 0 atmega88.sym
 {
 T 50300 50900 5 10 1 1 0 0 1
-refdes=U4
+refdes=U3
 T 50200 52100 5 10 0 0 0 0 1
 device=ATMEGA88
 T 50200 52300 5 10 0 0 0 0 1
@@ -383,7 +383,7 @@ device=DRC_Directive
 C 52800 51100 1 0 0 capacitor-1.sym
 {
 T 52800 51400 5 8 1 1 0 0 1
-refdes=C9
+refdes=C7
 T 53400 51400 5 8 1 1 0 0 1
 value=0.1uF
 T 53000 51800 5 10 0 0 0 0 1
@@ -464,7 +464,7 @@ C 38600 37800 1 90 0 capacitor-1.sym
 T 37900 38000 5 10 0 0 90 0 1
 device=CAPACITOR
 T 38300 37800 5 8 1 1 90 0 1
-refdes=C11
+refdes=C8
 T 37700 38000 5 10 0 0 90 0 1
 symversion=0.1
 T 38300 38400 5 8 1 1 90 0 1
@@ -497,7 +497,7 @@ netname=DVdd
 C 38800 38700 1 270 0 capacitor-polarized.sym
 {
 T 38900 37800 5 8 1 1 90 1 1
-refdes=C12
+refdes=C9
 T 39600 38500 5 10 0 0 270 0 1
 device=POLARIZED_CAPACITOR
 T 38900 38400 5 8 1 1 90 1 1
@@ -524,7 +524,7 @@ N 39000 37800 39000 37700 4
 C 39800 50700 1 90 0 capacitor-1.sym
 {
 T 39500 50700 5 8 1 1 90 0 1
-refdes=C13
+refdes=C10
 T 39500 51300 5 8 1 1 90 0 1
 value=4.7uF
 T 39100 50900 5 10 0 0 90 0 1
@@ -539,7 +539,7 @@ N 39600 50700 39600 50300 4
 C 43600 50700 1 90 0 capacitor-1.sym
 {
 T 43300 50700 5 8 1 1 90 0 1
-refdes=C14
+refdes=C11
 T 43300 51300 5 8 1 1 90 0 1
 value=4.7uF
 T 42900 50900 5 10 0 0 90 0 1
@@ -554,7 +554,7 @@ N 43400 50700 43400 50300 4
 C 43100 46900 1 90 0 capacitor-1.sym
 {
 T 42800 46900 5 8 1 1 90 0 1
-refdes=C15
+refdes=C12
 T 42800 47500 5 8 1 1 90 0 1
 value=0.1uF
 T 42400 47100 5 10 0 0 90 0 1
@@ -569,7 +569,7 @@ N 42900 46900 42900 46500 4
 C 39800 46900 1 90 0 capacitor-1.sym
 {
 T 39500 46900 5 8 1 1 90 0 1
-refdes=C16
+refdes=C13
 T 39500 47500 5 8 1 1 90 0 1
 value=4.7uF
 T 39100 47100 5 10 0 0 90 0 1
